@@ -10,7 +10,11 @@ const Bottom = createBottomTabNavigator<AppStackParamList>();
 
 export default function HomeScreen() {
   return (
-      <Bottom.Navigator initialRouteName="Landing">
+      <Bottom.Navigator 
+        screenOptions={{
+          headerShown: false
+        }} 
+        initialRouteName="Landing">
         <Bottom.Screen name="Landing" component={LandingScreen} />
         <Bottom.Screen name="Notifications" component={NotificationsScreen} />
       </Bottom.Navigator>
